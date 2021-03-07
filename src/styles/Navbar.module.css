@@ -1,0 +1,43 @@
+.homeNav {
+  padding: 1.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navContainer .navLinks {
+  display: flex;
+  color: white;
+  font-weight: normal;
+
+  display: flex;
+  align-items: center;
+}
+
+.navContainer .navLinks p {
+  padding: 0 1.5rem;
+  font-family: 'Open Sans';
+  font-weight: 600;
+}
+
+.navContainer .navLinks button {
+  padding: 1rem 3rem;
+
+  background: none;
+  border: none;
+  border: 3px solid white;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  border-radius: 50px;
+  font-family: 'Open Sans';
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.navContainer .navLinks button:hover {
+  transition: background 0.2s;
+  background: white;
+  color: black;
+}

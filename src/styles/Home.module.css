@@ -1,0 +1,16 @@
+.homeContainer {
+  position: relative;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-image: url('../../public/Illus1.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.homeContainer .illustrationTwo {
+  position: absolute;
+  top: 10rem;
+  right: 18rem;  
+}
