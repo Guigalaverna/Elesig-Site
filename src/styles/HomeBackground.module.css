@@ -1,0 +1,11 @@
+.homeBackgroundContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 4.5rem;
+}
+
+.homeBackgroundContainer img {
+  width: 20rem;
+}

@@ -1,16 +1,82 @@
-.homeContainer {
-  position: relative;
+/* Home Container */
 
+.homeContainer {
   width: 100vw;
   height: 100vh;
-
-  background-image: url('../../public/Illus1.svg');
-  background-size: cover;
-  background-repeat: no-repeat;
+  position: relative;
+  padding: 0 2rem;
 }
 
-.homeContainer .illustrationTwo {
+.homeContainer > svg {
+  z-index: -999;
   position: absolute;
-  top: 10rem;
-  right: 18rem;  
+  top: 0;
+  left: 0;
+  /* width: 26.75rem;
+  height: 37.75rem; */
+}
+
+.homeContainer .homeContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  justify-content: space-between;
+  height: 50vh;
+}
+
+/* Home Titles */
+
+.homeContainer .homeContent > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 2rem 0;
+}
+
+.homeContainer .homeContent > div h1 {
+  text-align: center;
+  max-width: 250px;
+}
+
+.homeContainer .homeContent > div h1 span {
+  font-size: 3rem;
+}
+
+.homeContainer .homeContent > div h1 span:first-child {
+  font-weight: 300;
+}
+
+.homeContainer .homeContent > div p {
+  display: none;
+}
+
+.homeContainer .homeContent > div button {
+  background: rgb(168, 87, 248);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(168, 87, 248, 1) 0%,
+    rgba(100, 82, 222, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(168, 87, 248, 1) 0%,
+    rgba(100, 82, 222, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(168, 87, 248, 1) 0%,
+    rgba(100, 82, 222, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a857f8",endColorstr="#6452de",GradientType=1);
+
+  border: none;
+  border-radius: 50px;
+  margin-top: 5rem;
+  color: white;
+  padding: 1.25rem 3.25rem;
+
+  box-shadow: 0 0 60px rgb(152, 82, 222);
 }

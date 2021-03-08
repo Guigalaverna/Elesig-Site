@@ -1,24 +1,32 @@
-.homeNav {
-  padding: 1.5rem;
-
+.navContainer {
+  padding: 3.438rem 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+}
+
+.navContainer > svg > path:last-child {
+  fill: white;
 }
 
 .navContainer .navLinks {
-  display: flex;
-  color: white;
-  font-weight: normal;
-
-  display: flex;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   align-items: center;
 }
 
-.navContainer .navLinks p {
+.navContainer .navLinks > div p {
   padding: 0 1.5rem;
-  font-family: 'Open Sans';
-  font-weight: 600;
+  font-family: "Open Sans";
+  font-weight: 300;
+  color: white;
+}
+
+.navContainer .navLinks > div {
+  display: flex;
 }
 
 .navContainer .navLinks button {
@@ -31,13 +39,68 @@
   color: white;
   font-weight: bold;
   border-radius: 50px;
-  font-family: 'Open Sans';
-  font-weight: bold;
+  font-family: "Open Sans";
+  font-weight: 400;
   transition: background 0.2s;
+
+  margin: 0 5rem;
 }
 
-.navContainer .navLinks button:hover {
+.navContainer .navLinks button:focus {
   transition: background 0.2s;
   background: white;
-  color: black;
+  color: #6452de;
+  font-weight: 800;
 }
+
+/* @media (min-width: 800px) {
+  .navContainer {
+    padding: 1.5rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navContainer > svg > path:last-child {
+    fill: black;
+  }
+
+  .navContainer .navLinks {
+    display: flex;
+    color: white;
+    font-weight: normal;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .navContainer .navLinks > div p {
+    padding: 0 1.5rem;
+    font-family: "Open Sans";
+    font-weight: 300;
+  }
+
+  .navContainer .navLinks button {
+    padding: 1rem 3rem;
+
+    background: none;
+    border: none;
+    border: 3px solid white;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    border-radius: 50px;
+    font-family: "Open Sans";
+    font-weight: 400;
+    transition: background 0.2s;
+  }
+
+  .navContainer .navLinks button:hover {
+    transition: background 0.2s;
+    background: white;
+    color: black;
+  }
+} */
