@@ -5,7 +5,7 @@
   align-items: center;
 }
 
-.navContainer > svg > path:last-child {
+.navContainer > svg > path {
   fill: white;
 }
 
@@ -53,54 +53,23 @@
   font-weight: 800;
 }
 
-/* @media (min-width: 800px) {
+@media (min-width: 800px) {
   .navContainer {
-    padding: 1.5rem;
-
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
   }
 
-  .navContainer > svg > path:last-child {
+  .navContainer > svg > path {
     fill: black;
   }
 
   .navContainer .navLinks {
     display: flex;
-    color: white;
-    font-weight: normal;
-
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .navContainer .navLinks > div p {
-    padding: 0 1.5rem;
-    font-family: "Open Sans";
-    font-weight: 300;
   }
 
   .navContainer .navLinks button {
-    padding: 1rem 3rem;
-
-    background: none;
-    border: none;
-    border: 3px solid white;
-    cursor: pointer;
-    color: white;
-    font-weight: bold;
-    border-radius: 50px;
-    font-family: "Open Sans";
-    font-weight: 400;
-    transition: background 0.2s;
+    margin: 0 3rem 0 0;
   }
-
-  .navContainer .navLinks button:hover {
-    transition: background 0.2s;
-    background: white;
-    color: black;
-  }
-} */
+}

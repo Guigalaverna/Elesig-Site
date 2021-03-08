@@ -80,3 +80,22 @@
 
   box-shadow: 0 0 60px rgb(152, 82, 222);
 }
+
+@media (min-width: 800px) {
+  .homeContainer {
+    padding: 0 3rem;
+    position: relative;
+  }
+
+  .homeContainer > svg {
+  }
+
+  .homeBackground {
+    display: none;
+  }
+
+  .homeContainer .homeContent {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}

@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1676" height="1040" viewBox="0 0 1676 1040">
   <defs>
-    <clipPath id="clip-path">
+    <clipPath id="clipPath">
       <rect id="Retângulo_13" data-name="Retângulo 13" width="1676" height="1040" transform="translate(-259 -1242)" fill="#fff" stroke="#707070" stroke-width="1"/>
     </clipPath>
-    <clipPath id="clip-path-2">
+    <clipPath id="clipPath-2">
       <rect id="Retângulo_12" data-name="Retângulo 12" width="1670" height="981" transform="translate(97 -1242)" fill="#fff" stroke="#707070" stroke-width="1"/>
     </clipPath>
     <linearGradient id="linear-gradient" x1="0.851" y1="0.216" x2="0.399" y2="0.91" gradientUnits="objectBoundingBox">
@@ -11,8 +11,8 @@
       <stop offset="1" stop-color="#6452de"/>
     </linearGradient>
   </defs>
-  <g id="Grupo_de_máscara_5" data-name="Grupo de máscara 5" transform="translate(259 1242)" clip-path="url(#clip-path)">
-    <g id="Grupo_de_máscara_4" data-name="Grupo de máscara 4" clip-path="url(#clip-path-2)">
+  <g id="Grupo_de_máscara_5" data-name="Grupo de máscara 5" transform="translate(259 1242)" clipPath="url(#clipPath)">
+    <g id="Grupo_de_máscara_4" data-name="Grupo de máscara 4" clipPath="url(#clipPath-2)">
       <path id="Caminho_60" data-name="Caminho 60" d="M713.35,30.762s52.508,255.758,395.877,343.95,151.931,210.956,181.889,323.313,130.532,80.255,188.309,165.1,132.672,116.943,213.988,68.79,134.812-144.459,74.9-295.8,77.036-341.657,293.163-188.026,348.8-905.736-620.564-678.729S713.35,30.762,713.35,30.762Z" transform="translate(-575.464 -1272.795)" fill="url(#linear-gradient)"/>
     </g>
   </g>

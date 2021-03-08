@@ -3,9 +3,17 @@
   align-items: center;
   justify-content: center;
 
-  margin-top: 4.5rem;
+  margin-top: 0.25rem;
 }
 
 .homeBackgroundContainer img {
   width: 20rem;
+}
+
+@media (min-width: 800px) {
+  .homeBackgroundContainer > img {
+    width: 40rem;
+    margin-top: 10rem;
+    margin-right: 25rem;
+  }
 }

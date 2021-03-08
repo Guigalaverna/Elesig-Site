@@ -1,21 +1,20 @@
 import styles from "../styles/Home.module.css";
 import Navbar from "../components/Navbar";
 import HomeBackground from "../components/HomeBackground";
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 
-/**
- * TODO: Create Navigation Bar
- * TODO: Use React Smooth Scroll to scrol
- */
-
-interface BackgroundDesktopProps {
+interface BackgroundProps {
   children: ReactNode;
 }
 
-function BackgroundDesktop({ children }: BackgroundDesktopProps) {
+function BackgroundMobile({ children }: BackgroundProps) {
   return (
     <>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 428 604">
+      <svg
+        className={styles.homeBackground}
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 428 604"
+      >
         <defs>
           <clipPath id="clip-path">
             <rect
@@ -26,7 +25,7 @@ function BackgroundDesktop({ children }: BackgroundDesktopProps) {
               transform="translate(-1905 1102)"
               fill="#fff"
               stroke="#707070"
-              stroke-width="1"
+              strokeWidth="1"
             />
           </clipPath>
           <linearGradient
@@ -37,8 +36,8 @@ function BackgroundDesktop({ children }: BackgroundDesktopProps) {
             y2="0.91"
             gradientUnits="objectBoundingBox"
           >
-            <stop offset="0" stop-color="#b056ff" />
-            <stop offset="1" stop-color="#6452de" />
+            <stop offset="0" stopColor="#b056ff" />
+            <stop offset="1" stopColor="#6452de" />
           </linearGradient>
         </defs>
         <g
@@ -61,29 +60,135 @@ function BackgroundDesktop({ children }: BackgroundDesktopProps) {
   );
 }
 
+function BackgroundDesktop({ children }: BackgroundProps) {
+  return (
+    <>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="1676"
+        height="1040"
+        viewBox="0 0 1676 1040"
+      >
+        <defs>
+          <clipPath id="clip-path">
+            <rect
+              id="Retângulo_13"
+              data-name="Retângulo 13"
+              width="1676"
+              height="1040"
+              transform="translate(-259 -1242)"
+              fill="#fff"
+              stroke="#707070"
+              stroke-width="1"
+            />
+          </clipPath>
+          <clipPath id="clip-path-2">
+            <rect
+              id="Retângulo_12"
+              data-name="Retângulo 12"
+              width="1670"
+              height="981"
+              transform="translate(97 -1242)"
+              fill="#fff"
+              stroke="#707070"
+              stroke-width="1"
+            />
+          </clipPath>
+          <linearGradient
+            id="linear-gradient"
+            x1="0.851"
+            y1="0.216"
+            x2="0.399"
+            y2="0.91"
+            gradientUnits="objectBoundingBox"
+          >
+            <stop offset="0" stop-color="#b056ff" />
+            <stop offset="1" stop-color="#6452de" />
+          </linearGradient>
+        </defs>
+        <g
+          id="Grupo_de_máscara_5"
+          data-name="Grupo de máscara 5"
+          transform="translate(259 1242)"
+          clip-path="url(#clip-path)"
+        >
+          <g
+            id="Grupo_de_máscara_4"
+            data-name="Grupo de máscara 4"
+            clip-path="url(#clip-path-2)"
+          >
+            <path
+              id="Caminho_60"
+              data-name="Caminho 60"
+              d="M713.35,30.762s52.508,255.758,395.877,343.95,151.931,210.956,181.889,323.313,130.532,80.255,188.309,165.1,132.672,116.943,213.988,68.79,134.812-144.459,74.9-295.8,77.036-341.657,293.163-188.026,348.8-905.736-620.564-678.729S713.35,30.762,713.35,30.762Z"
+              transform="translate(-575.464 -1272.795)"
+              fill="url(#linear-gradient)"
+            />
+          </g>
+        </g>
+      </svg>
+      {children}
+    </>
+  );
+}
+
 export default function Home() {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    if (window) {
+      setIsLoaded(true);
+    }
+  }, []);
+
   return (
     <section className={styles.homeContainer}>
       <Navbar />
-      <BackgroundDesktop>
-        <section className={styles.homeContent}>
-          <HomeBackground />
-          <div>
-            <h1 className={styles.homeTitle}>
-              <span>A ajuda que sua empresa </span>
-              <span style={{ color: "#6452DE" }}>precisa</span>
-            </h1>
-            <p>
-              Donec ut tristique purus. Donec commodo nisi quis neque malesuada
-              facilisis. Nunc nec venenatis arcu. Maecenas id tristique purus.
-              Donec in velit sit amet arcu congue viverra. Vestibulum varius
-              pharetra cursus. Nullam arcu mauris, suscipit at tempus non,
-              ornare vel nisi.
-            </p>
-            <button>COMEÇAR</button>
-          </div>
-        </section>
-      </BackgroundDesktop>
+      {isLoaded ? (
+        <>
+          {window.innerWidth <= 800 ? (
+            <BackgroundMobile>
+              <section className={styles.homeContent}>
+                <HomeBackground />
+                <div>
+                  <h1 className={styles.homeTitle}>
+                    <span>A ajuda que sua empresa </span>
+                    <span style={{ color: "#6452DE" }}>precisa</span>
+                  </h1>
+                  <p>
+                    Donec ut tristique purus. Donec commodo nisi quis neque
+                    malesuada facilisis. Nunc nec venenatis arcu. Maecenas id
+                    tristique purus. Donec in velit sit amet arcu congue
+                    viverra. Vestibulum varius pharetra cursus. Nullam arcu
+                    mauris, suscipit at tempus non, ornare vel nisi.
+                  </p>
+                  <button>COMEÇAR</button>
+                </div>
+              </section>
+            </BackgroundMobile>
+          ) : (
+            <BackgroundDesktop>
+              <section className={styles.homeContent}>
+                <HomeBackground />
+                <div>
+                  <h1 className={styles.homeTitle}>
+                    <span>A ajuda que sua empresa </span>
+                    <span style={{ color: "#6452DE" }}>precisa</span>
+                  </h1>
+                  <p>
+                    Donec ut tristique purus. Donec commodo nisi quis neque
+                    malesuada facilisis. Nunc nec venenatis arcu. Maecenas id
+                    tristique purus. Donec in velit sit amet arcu congue
+                    viverra. Vestibulum varius pharetra cursus. Nullam arcu
+                    mauris, suscipit at tempus non, ornare vel nisi.
+                  </p>
+                  <button>COMEÇAR</button>
+                </div>
+              </section>
+            </BackgroundDesktop>
+          )}
+        </>
+      ) : null}
     </section>
   );
 }
